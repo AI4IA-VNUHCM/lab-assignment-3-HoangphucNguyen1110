@@ -13,7 +13,20 @@ ______________________________________
 
 void Ex5(int arr[], int n){
 	//Your codes here
-	
+	int j = 0;
+    int b;
+    for (int i = 0; i < n; i++) {
+        if (arr[i] > 0) {
+        	if (i != j){
+        		int c = arr[i];
+        		arr[i]=arr[j];
+        		arr[j]=c;
+			}
+			j++;
+			}                       
+       }
+	   for (int i = 0; i < n; i++)
+        printf(" %d ", arr[i]);
 }
 
 int main(int argc, char *argv[]) {
