@@ -15,29 +15,29 @@ Ex:
 void Ex2(int arr[], int n){
 	//Your codes here
 	int i;
-	for ( i=0;i<argc-1;i++){
-		for (int j=i;j<argc;j++){
-			if (testcase[i] % 2 ==0){
-				if (testcase[i] <= testcase[j]){
-					int c=testcase[i];
-					testcase[i] =testcase[j];
-					testcase[j] =c;
+	for ( i=0;i<n-1;i++){
+		for (int j=i;j<n;j++){
+			if (arr[i] % 2 ==0){
+				if (arr[i] <= arr[j]){
+					int c=arr[i];
+					arr[i] =arr[j];
+					arr[j] =c;
 				}
 			}
 		}
 			
 	}
-	for (i=0;i<argc-1;i++){	
-			if ( testcase[i] % 2!=0){
-				if( testcase[i] > testcase[i+1]){
-					int c=testcase[i];
-					testcase[i]=testcase[i+1];
-					testcase[i+1]=c;
+	for (i=0;i<n-1;i++){	
+			if ( arr[i] % 2!=0){
+				if( arr[i] > arr[i+1]){
+					int c=arr[i];
+					arr[i]=arr[i+1];
+					arr[i+1]=c;
 				}
 			}	
 	}
-	for (i=0;i<argc;i++){
-		printf(" %d ", testcase[i]);
+	for (i=0;i<n;i++){
+		printf(" %d ", arr[i]);
 	}
 }
 
