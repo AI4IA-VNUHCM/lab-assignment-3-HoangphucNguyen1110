@@ -14,8 +14,33 @@ Ex:
 
 void Ex2(int arr[], int n){
 	//Your codes here
-	
+	int i;
+	for ( i=0;i<n-1;i++){
+		for (int j=i;j<n;j++){
+			if (arr[i] % 2 ==0){
+				if (arr[i] <= arr[j]){
+					int c=arr[i];
+					arr[i] =arr[j];
+					arr[j] =c;
+				}
+			}
+		}
+			
+	}
+	for (i=0;i<n-1;i++){	
+			if ( arr[i] % 2!=0){
+				if( arr[i] > arr[i+1]){
+					int c=arr[i];
+					arr[i]=arr[i+1];
+					arr[i+1]=c;
+				}
+			}	
+	}
+	for (i=0;i<n;i++){
+		printf(" %d ", arr[i]);
+	}
 }
+
 
 int main(int argc, char *argv[]) {
 	//testing variable, applying it to your algorithm for auto-evaluating
